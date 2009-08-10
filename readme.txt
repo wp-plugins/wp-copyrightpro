@@ -17,6 +17,7 @@ if you install this plug-in, your content of wordpress will be protected.
 
 * **Disable selection of text**
 * **Disable right click on your Wordpress**
+* **WP-CopyRightPro doesn't have problems with search engines**
 
 
 **[Download now](http://downloads.wordpress.org/plugin/wp-copyrightpro.zip)**
