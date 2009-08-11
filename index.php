@@ -3,7 +3,7 @@
       Plugin Name: WP-CopyRightPro
       Plugin URI: http://puydi.net/blog/wp-copyrightpro-plug-in-para-wordpress/
       Description: WP-CopyRightPro is a plug-in that prevents the copying of texts and images from your blog.
-      Version: 1.0
+      Version: 1.1
       Author: Andres Felipe Perea V
       Author URI: http://puydi.net/
 */
