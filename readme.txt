@@ -56,4 +56,7 @@ This section describes how to install the plugin and get it working.
 = 1.0 =
 * Firt version of WP-CopyRightPro
 
+= 1.1 =
+* Firefox problem solved
+
 
