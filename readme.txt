@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: copyright, images, gallery, prevent copy, text, disable right click, prevent select text, wordpress, content, protect
 Requires at least: 2.7
 Tested up to: 2.8.4
-Stable tag: 1.3
+Stable tag: 1.4
 
 If you install WP-CopyRightPro, your content of wordpress will be protected.
 
@@ -54,16 +54,17 @@ This section describes how to install the plugin and get it working.
 
 == Changelog ==
 
-= 1.0 =
-* Firt version of WP-CopyRightPro
-
-= 1.1 =
-* Firefox problem solved
-
-= 1.2 =
-* Now your site is protected from iframe
+= 1.4 =
+* Now, charged fast
 
 = 1.3 =
 * Header problem solved
 
+= 1.2 =
+* Now your site is protected from iframe
 
+= 1.1 =
+* Firefox problem solved
+
+= 1.0 =
+* Firt version of WP-CopyRightPro
