@@ -3,8 +3,8 @@ Contributors: Andres Perea V
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7318421
 Tags: copyright, images, gallery, prevent copy, text, disable right click, prevent select text, wordpress, content, protect
 Requires at least: 2.7
-Tested up to: 2.8.4
-Stable tag: 1.4
+Tested up to: 2.8.6
+Stable tag: 1.5
 
 If you install WP-CopyRightPro, your content of wordpress will be protected.
 
@@ -53,6 +53,9 @@ This section describes how to install the plugin and get it working.
 
 
 == Changelog ==
+
+= 1.5 =
+* Now, charged fast and Tested up to: 2.8.6
 
 = 1.4 =
 * Now, charged fast
