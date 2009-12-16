@@ -57,7 +57,7 @@ This section describes how to install the plugin and get it working.
 1. Copyright Plug-in **WP-CopyRightPro**
 
 
-== FAQS ==
+== Faq ==
 
 = Wp-CopyRightPro is bad for the SEO? =
 This plug-in is developed in PHP and javascript, for this reason the plug-in does not affect search engines, it only affects the user's browser that tries to copy your content.
@@ -66,6 +66,7 @@ This plug-in is developed in PHP and javascript, for this reason the plug-in doe
 When activating 100% of the protections, in less than a week, Wp-CopyRightPro can reveal sites that are using your images, just by logging into Google.com images section type this (site:yoursite.com) and google will show the sites that are using your images.
 
 **To see the plug-in in action you can enter [here](http://quehayparahacer.com/).**
+
 **For questions, suggestions, please enter our Official Site [here](http://puydi.net/blog/wp-copyrightpro-plug-in-para-wordpress/).**
 
 == Changelog ==
