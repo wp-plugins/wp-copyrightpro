@@ -1,12 +1,35 @@
+<?php	
+    global $wpdb;
+	$fivesdrafts = $wpdb->get_results("SELECT*FROM wp_copyrightpro");
+
+	foreach ($fivesdrafts as $fivesdraft) {
+			$result[0]=$fivesdraft->copy_click;
+			$result[1]=$fivesdraft->copy_selection;
+			$result[2]=$fivesdraft->copy_iframe;
+			$result[3]=$fivesdraft->copy_drop;
+	}
+if ($result[3]=="y"){
+$nuncopy4=1;
+}
+?>
 <!--
 This site is protected by WP-CopyRightPro
 Copyright 2009  PUYDI, IN  (http://www.puydi.net/)
 -->
+
+<!-- EVITAR CLICK DERECHO-->
+<?PHP
+if ($result[0]=="y"){?>
 <script language="Javascript">
 <!-- Begin
 document.oncontextmenu = function(){return false}
 // End -->
 </script>
+<?PHP }?>
+
+<!-- SELECCION DE TEXTO-->
+<?php
+if ($result[1]=="y"){?>
 <script type="text/javascript">
 // IE Evitar seleccion de texto
 document.onselectstart=function(){
@@ -29,8 +52,24 @@ return false;
 }
 // End -->
 </script>
+<?php }?>
+
+<!-- EVITAR IFRAME-->
+<?php
+if ($result[2]=="y"){?>
 <script type="text/javascript" language="JavaScript1.1">
 <!--// evito que se cargue en otro frame
 if (parent.frames.length > 0) top.location.replace(document.location);
 //-->
 </script>
+<?php }?>
+
+<!-- EVITAR DRAG AND DROP-->
+<?php
+if ($result[3]=="y"){?>
+<script language="Javascript">
+<!-- Begin
+document.ondragstart = function(){return false}
+// End -->
+</script>
+<?php }?>
