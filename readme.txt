@@ -57,7 +57,7 @@ This section describes how to install the plugin and get it working.
 1. Copyright Plug-in **WP-CopyRightPro**
 
 
-== Faq ==
+== Frequently Asked Questions ==
 
 = Wp-CopyRightPro is bad for the SEO? =
 This plug-in is developed in PHP and javascript, for this reason the plug-in does not affect search engines, it only affects the user's browser that tries to copy your content.
