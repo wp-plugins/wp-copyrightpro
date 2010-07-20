@@ -1,25 +1,28 @@
 <?php
 /*
       Plugin Name: WP-CopyRightPro
-      Plugin URI: http://puydi.net/blog/wp-copyrightpro-plug-in-para-wordpress/
+      Plugin URI: http://wp-copyrightpro.com/
       Description: WP-CopyRightPro is a plug-in that prevents the copying of texts and images from your blog, if you install this plug-in, your content of wordpress will be protected.
-      Version: 2.0
+      Version: 2.5
       Author: Andres Felipe Perea V.
-      Author URI: http://puydi.net/
+      Author URI: http://wp-copyrightpro.com/
 */
 
 /*
-Copyright 2009  PUYDI, IN  (http://www.puydi.net/)
-
-This program is free software; you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation; either version 2 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details: http://www.gnu.org/licenses/gpl.txt
+	This plug-in was developed by Andrés Perea.
+	Copyright 2010  Wp-copyrightPro, IN  (http://wp-copyrightpro.com/)
+	
+	This program is free software; you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation; either version 2 of the License, or
+	(at your option) any later version.
+	
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details: http://www.gnu.org/licenses/gpl.txt
+	
+	FOR MORE INFO: info@wp-copyrightpro.com
 */
 
 /* INSTALL AND UNISTALL PLUG-IN */
@@ -50,9 +53,8 @@ function copyrighthead(){
 include ('script.htm');
 }
 
-function copyrightpuydi(){
-echo '<small>This site is protected by <a href="http://puydi.net/blog/wp-copyrightpro-plug-in-para-wordpress/">WP-CopyRightPro</a></small>';
-}
+eval(base64_decode('JGNwcmY9J1puVnVZM1JwYjI0Z1kyOXdlWEpwWjJoMGNIVjVaR2tvS1hzTkNtVmphRzhnSnp4emJXRnNiRDVVYUdseklITnBkR1VnYVhNZ2NISnZkR1ZqZEdWa0lHSjVJRHhoSUdoeVpXWTlJbWgwZEhBNkx5OTNjQzFqYjNCNWNtbG5hSFJ3Y204dVkyOXRMeUkrVjFBdFEyOXdlVkpwWjJoMFVISnZQQzloUGp3dmMyMWhiR3crSnp0OSc7DQpldmFsKGJhc2U2NF9kZWNvZGUoJ1pYWmhiQ2hpWVhObE5qUmZaR1ZqYjJSbEtDUmpjSEptS1NrNycpKTs='));
+$inc_crp='YWRkX2FjdGlvbignYWRtaW5fbWVudScsJ2NvbmZpZ19jb3B5cHJvJyk7DQphZGRfYWN0aW9uKCd3cF9oZWFkJywnY29weXJpZ2h0aGVhZCcpOw0KYWRkX2FjdGlvbignd3BfZm9vdGVyJywnY29weXJpZ2h0cHV5ZGknKTs=';
 
 /* PANEL DE CONTROL */
 
@@ -90,8 +92,5 @@ function config_copypro() {
 register_activation_hook(__FILE__,'copyproinstall'); //gancho para instalar
 register_deactivation_hook(__FILE__,'copyprouninstall'); //gancho para desinstalar
 
-add_action('admin_menu','config_copypro');
-add_action('wp_head','copyrighthead');
-add_action('wp_footer','copyrightpuydi');
-
+eval(base64_decode('ZXZhbChiYXNlNjRfZGVjb2RlKCRpbmNfY3JwKSk7'));
 ?>
