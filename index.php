@@ -25,6 +25,28 @@
 	FOR MORE INFO: info@wp-copyrightpro.com
 */
 
+/*Validar Version*/
+function validar_version(){
+	$version_copyright="2.6";
+global $wpdb;
+	$fivesdrafts = $wpdb->get_results("SELECT*FROM `".$wpdb->prefix."copyrightpro` WHERE `Option`='version'");
+	foreach ($fivesdrafts as $fivesdraft) {
+			$result[0]=$fivesdraft->Value;
+	}
+	if($result[0]!=$version_copyright){
+		$version="x";
+	}else{
+		$version="ok";
+	}
+	return $version;
+}
+
+function update_basecopy(){
+	copyprouninstall();
+	copyproinstall();
+}
+	
+
 /* INSTALL AND UNISTALL PLUG-IN */
 function copyproinstall() {
 	global $wpdb;
@@ -36,7 +58,7 @@ function copyproinstall() {
  
 	$wpdb->query($sql);
 	$wpdb->query('INSERT INTO `'.$wpdb->prefix.'copyrightpro` (`Option`, `Value`) VALUES 
-	(\'copy_click\', \'y\'),(\'copy_selection\', \'y\'),(\'copy_iframe\', \'n\'),(\'copy_drop\', \'y\'), (\'copy_link\', \'n\')');
+	(\'copy_click\', \'y\'),(\'copy_selection\', \'y\'),(\'copy_iframe\', \'n\'),(\'copy_drop\', \'y\'), (\'copy_link\', \'n\'), (\'version\', \'2.6\')');
 }
 
 function copyprouninstall() {

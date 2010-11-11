@@ -1,6 +1,20 @@
 @charset "utf-8";
 /* CSS Document */
 
+/*version*/
+.version{
+	width:100%;
+	background-color:#F00;
+	color:#FFF;
+	font-weight:bold;
+	text-align:center;
+}
+.version input{
+	margin-left:10px;
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
 .titulo_panel{
 	float:left;
 	width:100%;
