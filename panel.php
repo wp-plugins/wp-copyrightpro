@@ -25,6 +25,10 @@ if($_POST['link']=="y"){
 $updatelink=update_link($_POST['copy_link']);
 }
 
+if($_POST['updatebase']=="y"){
+	update_basecopy();
+}
+
 /* cambiar imagen*/
 $copyclick=img_panelcopy('copy_click');
 $copyselection=img_panelcopy('copy_selection');
@@ -69,6 +73,13 @@ if($nuncopy=="0"){
 </head>
 <body>
 <div class="wrap">
+<?php $version=validar_version();?>
+<div class="version" <?php if ($version=="ok"){?>style="display:none;"<?php }?>>
+<form action="<?php echo $_SERVER['PHP_SELF']; ?>?page=<?php echo plugin_basename(__FILE__); ?>" method="post">
+<input type="hidden" name="updatebase" id="checkbox5" value="y" />
+PLEASE UPDATE DATABASE OF WP-COPYRIGHPRO<input type="submit" name="button" value="Update" class="button-secundary" />
+</form>
+</div>
 <div class="titulo_panel"><a href="http://wp-copyrightpro.com/" title="Wp-CopyRightPro" target="_blank"><img src="<?php echo plugins_url('wp-copyrightpro/images/logo.png');?>" /></a></div>
 
 <div class="contenedor_izquierdo">
