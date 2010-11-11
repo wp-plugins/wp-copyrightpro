@@ -3,7 +3,7 @@
       Plugin Name: WP-CopyRightPro
       Plugin URI: http://wp-copyrightpro.com/
       Description: WP-CopyRightPro is a plug-in that prevents the copying of texts and images from your blog, if you install this plug-in, your content of wordpress will be protected.
-      Version: 2.5
+      Version: 2.6
       Author: Andres Felipe Perea V.
       Author URI: http://wp-copyrightpro.com/
 */
@@ -29,21 +29,20 @@
 function copyproinstall() {
 	global $wpdb;
  
-	$sql = 'CREATE TABLE `wp_copyrightpro` (
-			`copy_click` VARCHAR( 1 ) NOT NULL ,
-			`copy_selection` VARCHAR( 1 ) NOT NULL ,
-			`copy_iframe` VARCHAR( 1 ) NOT NULL ,
-			`copy_drop` VARCHAR( 1 ) NOT NULL
+	$sql = 'CREATE TABLE `'.$wpdb->prefix.'copyrightpro` (
+			`Option` VARCHAR( 20 ) NOT NULL ,
+			`Value` VARCHAR( 20 ) NOT NULL
 			) ENGINE = MYISAM DEFAULT CHARSET=utf8';
  
 	$wpdb->query($sql);
-	$wpdb->query('INSERT INTO `'.wp_copyrightpro.'` SET copy_click = "y", copy_selection = "y", copy_iframe = "n", copy_drop = "y"');
+	$wpdb->query('INSERT INTO `'.$wpdb->prefix.'copyrightpro` (`Option`, `Value`) VALUES 
+	(\'copy_click\', \'y\'),(\'copy_selection\', \'y\'),(\'copy_iframe\', \'n\'),(\'copy_drop\', \'y\'), (\'copy_link\', \'n\')');
 }
 
 function copyprouninstall() {
 	global $wpdb;
  
-	$sql = "DROP TABLE `wp_copyrightpro`";
+	$sql = "DROP TABLE `".$wpdb->prefix."copyrightpro`";
 	$wpdb->query($sql);
 }
 
@@ -53,13 +52,19 @@ function copyrighthead(){
 include ('script.htm');
 }
 
-eval(base64_decode('JGNwcmY9J1puVnVZM1JwYjI0Z1kyOXdlWEpwWjJoMGNIVjVaR2tvS1hzTkNtVmphRzhnSnp4emJXRnNiRDVVYUdseklITnBkR1VnYVhNZ2NISnZkR1ZqZEdWa0lHSjVJRHhoSUdoeVpXWTlJbWgwZEhBNkx5OTNjQzFqYjNCNWNtbG5hSFJ3Y204dVkyOXRMeUkrVjFBdFEyOXdlVkpwWjJoMFVISnZQQzloUGp3dmMyMWhiR3crSnp0OSc7DQpldmFsKGJhc2U2NF9kZWNvZGUoJ1pYWmhiQ2hpWVhObE5qUmZaR1ZqYjJSbEtDUmpjSEptS1NrNycpKTs='));
-$inc_crp='YWRkX2FjdGlvbignYWRtaW5fbWVudScsJ2NvbmZpZ19jb3B5cHJvJyk7DQphZGRfYWN0aW9uKCd3cF9oZWFkJywnY29weXJpZ2h0aGVhZCcpOw0KYWRkX2FjdGlvbignd3BfZm9vdGVyJywnY29weXJpZ2h0cHV5ZGknKTs=';
+function copyrightpuydi(){
+echo '<small>This site is protected by <a href="http://wp-copyrightpro.com/">WP-CopyRightPro</a></small>';
+}
 
 /* PANEL DE CONTROL */
 
+function update_options($option, $value){
+	global $wpdb;
+	$wpdb->query("UPDATE ".$wpdb->prefix."copyrightpro SET Value = '$value' WHERE `Option`='$option'");
+}
+
+
 function update_copypro($clickpro, $selecpro, $iframepro, $droppro){
-global $wpdb;
 	if($clickpro==""){
 	$clickpro="n";
 	}
@@ -72,25 +77,47 @@ global $wpdb;
 	if($droppro==""){
 	$droppro="n";
 	}
-$wpdb->query("UPDATE wp_copyrightpro SET copy_click = '$clickpro', copy_selection = '$selecpro', copy_iframe = '$iframepro', copy_drop = '$droppro'");
+$update=update_options('copy_click', $clickpro);
+$update=update_options('copy_selection', $selecpro);
+$update=update_options('copy_iframe', $iframepro);
+$update=update_options('copy_drop', $droppro);
+}
+
+function update_link($link){
+	if($link==""){
+	$link="n";
+	}
+	$update=update_options('copy_link', $link);
 }
 
 function panel_copypro() {
 	include ('panel.php');
 }
 
-function about_copypro() {
-	include ('about.html');
+function config_copypro() {
+	add_menu_page('Wp-CopyRightPro Panel', 'Wp-CopyrightPro', 'administrator', 'wp-copyrightpro/panel.php', 'panel_copypro', plugins_url('wp-copyrightpro/images/Computer.gif'));
 }
 
-function config_copypro() {
-	add_menu_page('CopyRightPro Panel', 'CopyRightPro', 'administrator', 'wp-copyrightpro/panel.php', 'panel_copypro', plugins_url('wp-copyrightpro/images/Computer.gif'));
-	add_submenu_page( 'wp-copyrightpro/panel.php', 'About CopyRighPro', 'About', 'administrator', 'about-copyrightpro', 'about_copypro');
+/*Imagen Panel de control*/
+function img_panelcopy($option){
+	global $wpdb;
+	$fivesdrafts = $wpdb->get_results("SELECT*FROM `".$wpdb->prefix."copyrightpro` WHERE `Option`='$option'");
+	foreach ($fivesdrafts as $fivesdraft) {
+			$result[0]=$fivesdraft->Value;
+	}
+	return $result[0];
 }
 
 /* Añadir comando wordpress */
 register_activation_hook(__FILE__,'copyproinstall'); //gancho para instalar
 register_deactivation_hook(__FILE__,'copyprouninstall'); //gancho para desinstalar
 
-eval(base64_decode('ZXZhbChiYXNlNjRfZGVjb2RlKCRpbmNfY3JwKSk7'));
+add_action('admin_menu','config_copypro');
+add_action('wp_head','copyrighthead');
+
+/*Link FOOTER*/
+$link_copyfooter=img_panelcopy('copy_link');
+if ($link_copyfooter=="y"){
+add_action('wp_footer','copyrightpuydi');
+}
 ?>

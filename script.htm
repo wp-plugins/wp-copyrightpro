@@ -1,25 +1,19 @@
-<?php	
-    global $wpdb;
-	$fivesdrafts = $wpdb->get_results("SELECT*FROM wp_copyrightpro");
-
-	foreach ($fivesdrafts as $fivesdraft) {
-			$result[0]=$fivesdraft->copy_click;
-			$result[1]=$fivesdraft->copy_selection;
-			$result[2]=$fivesdraft->copy_iframe;
-			$result[3]=$fivesdraft->copy_drop;
-	}
-if ($result[3]=="y"){
-$nuncopy4=1;
-}
+<?php
+$copyclick=img_panelcopy('copy_click');
+$copyselection=img_panelcopy('copy_selection');
+$copyiframe=img_panelcopy('copy_iframe');
+$copydrop=img_panelcopy('copy_drop');
 ?>
+
 <!--
 This site is protected by WP-CopyRightPro
 Copyright 2010  Wp-CopyRightPro, IN  (http://wp-copyrightpro.com/)
 -->
 
+
 <!-- EVITAR CLICK DERECHO-->
 <?PHP
-if ($result[0]=="y"){?>
+if ($copyclick=="y"){?>
 <script language="Javascript">
 <!-- Begin
 document.oncontextmenu = function(){return false}
@@ -29,7 +23,7 @@ document.oncontextmenu = function(){return false}
 
 <!-- SELECCION DE TEXTO-->
 <?php
-if ($result[1]=="y"){?>
+if ($copyselection=="y"){?>
 <script type="text/javascript">
 // IE Evitar seleccion de texto
 document.onselectstart=function(){
@@ -37,6 +31,7 @@ if (event.srcElement.type != "text" && event.srcElement.type != "textarea" && ev
 return false
 else return true;
 };
+
 // FIREFOX Evitar seleccion de texto
 if (window.sidebar){
 document.onmousedown=function(e){
@@ -54,9 +49,10 @@ return false;
 </script>
 <?php }?>
 
+
 <!-- EVITAR IFRAME-->
 <?php
-if ($result[2]=="y"){?>
+if ($copyiframe=="y"){?>
 <script type="text/javascript" language="JavaScript1.1">
 <!--// evito que se cargue en otro frame
 if (parent.frames.length > 0) top.location.replace(document.location);
@@ -64,9 +60,10 @@ if (parent.frames.length > 0) top.location.replace(document.location);
 </script>
 <?php }?>
 
+
 <!-- EVITAR DRAG AND DROP-->
 <?php
-if ($result[3]=="y"){?>
+if ($copydrop=="y"){?>
 <script language="Javascript">
 <!--// Begin
 document.ondragstart = function(){return false}
