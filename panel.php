@@ -1,7 +1,7 @@
 <?php
 /*
 	This plug-in was developed by Andrés Perea.
-	Copyright 2010  Wp-copyrightPro, IN  (http://wp-copyrightpro.com/)
+	Copyright 2011  Wp-copyrightPro, IN  (http://wp-copyrightpro.com/)
 
 	This program is free software; you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
@@ -135,8 +135,9 @@ PLEASE UPDATE DATABASE OF WP-COPYRIGHPRO<input type="submit" name="button" value
     This plug-in is developed in PHP and javascript, for this reason   the plug-in does not affect search engines, it only affects the user's   browser that tries to copy your content.</p>
   <p align="justify"><strong>Wp-CopyrightPro detects the hotlink?</strong><br />
     When activating 100% of the protections, in less than a week,   Wp-CopyRightPro can reveal sites that are using your images, just by   logging into Google.com images section type this (site:yoursite.com) and   google will show the sites that are using your images.</p>
-  <p align="center"><strong>To see the plug-in in action you can enter <a href="http://quehayparahacer.com/" target="_blank">here</a>.<br />
-For questions, suggestions, please enter our Official Site <a href="http://wp-copyrightpro.com/" target="_blank" title="Wp-CopyRightPro.Com">here</a>.</strong>
+  <p align="justify"><strong>How to remove the text in the footer? </strong><br />
+    Remove the footer text is easy, you just have to give us a **$10 coffee** and then write to info@wp-copyrightpro.com</p>
+  <p align="center"><strong>For questions, suggestions, please enter our Official Site <a href="http://wp-copyrightpro.com/" target="_blank" title="Wp-CopyRightPro.Com">here</a>.</strong>
   </p>
 </div>
 </div>
@@ -150,8 +151,8 @@ For questions, suggestions, please enter our Official Site <a href="http://wp-co
 <div class="sombra_panel">
 <h3>Give us a cup of coffee.</h3>
 </div>
-<div class="contenido"> <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=5TS4C2GX9WUR6&amp;lc=ES&amp;item_name=puydi&amp;item_number=wpcopyrightpro&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted" target="_blank"><img src="<?php echo plugins_url('wp-copyrightpro/images/gimme-coffee.png');?>" width="120" height="120" alt="Coffee" title="Donate" /></a>If you value our work and the plugin's been helpful to you, give us a   cup of coffee, and we will gladly continue working at night and provide   you with better support. Any kind of contribution would be highly appreciated. Thanks!
-<a class="button-secondary" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=5TS4C2GX9WUR6&lc=ES&item_name=puydi&item_number=wpcopyrightpro&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted" target="_blank" title="Donate">Donate</a>
+<div class="contenido"> <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=5TS4C2GX9WUR6&lc=ES&item_name=Wp%2dcopyrightpro&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted" target="_blank"><img src="<?php echo plugins_url('wp-copyrightpro/images/gimme-coffee.png');?>" width="120" height="120" alt="Coffee" title="Donate" /></a>If you value our work and the plugin's been helpful to you, give us a   cup of coffee, and we will gladly continue working at night and provide   you with better support. Any kind of contribution would be highly appreciated. Thanks!
+<a class="button-secondary" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=5TS4C2GX9WUR6&lc=ES&item_name=Wp%2dcopyrightpro&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted" target="_blank" title="Donate">Donate</a>
 </div>
 </div>
 <!-- Fin Menu donaciones-->
@@ -164,8 +165,8 @@ For questions, suggestions, please enter our Official Site <a href="http://wp-co
 <div class="contenido">
 This plugin is primarily developed, maintained, supported and documented by Wp-Copyrightpro.com with a lot of love & effort.<br>
 <ul>
-<li style="background:url(<?php echo plugins_url('wp-copyrightpro/images/icon-rating.png');?>) no-repeat scroll 16px 50% transparent; padding-left: 38px; text-decoration: none;"><a href="http://wordpress.org/extend/plugins/wp-copyrightpro/" target="_blank">Give it a good rating on WordPress.org</a></li>
-<li style="background:url(<?php echo plugins_url('wp-copyrightpro/images/icon-paypal.gif');?>) no-repeat scroll 16px 50% transparent; padding-left: 38px; text-decoration: none;"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=5TS4C2GX9WUR6&lc=ES&item_name=puydi&item_number=wpcopyrightpro&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted" target="_blank">Donate the work via paypal</a></li>
+<li style="background:url(<?php echo plugins_url('wp-copyrightpro/images/icon-rating.png');?>) no-repeat scroll 16px 50% transparent; padding-left: 38px; text-decoration: none;"><a href="http://wordpress.org/extend/plugins/copyrightpro/" target="_blank">Give it a good rating on WordPress.org</a></li>
+<li style="background:url(<?php echo plugins_url('wp-copyrightpro/images/icon-paypal.gif');?>) no-repeat scroll 16px 50% transparent; padding-left: 38px; text-decoration: none;"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=5TS4C2GX9WUR6&lc=ES&item_name=Wp%2dcopyrightpro&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted" target="_blank">Donate the work via paypal</a></li>
 </ul>
 </div>
 </div>
@@ -186,6 +187,17 @@ Proudly tell the world, ¡your content is protected!
 </div>
 </div>
 <!-- Fin Menu link-->
+
+<!-- Remover texto link-->
+<div class="widefat" id="contenedor_calificar">
+<div class="sombra_panel">
+<h3>How to remove the text in the footer?</h3>
+</div>
+<div class="contenido">
+Remove the footer text is easy, you just have to give us a <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=5TS4C2GX9WUR6&lc=ES&item_name=Wp%2dcopyrightpro&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted" target="_blank">$10 coffee</a>
+</div>
+</div>
+<!-- Remover texto link-->
 </div>
 
 </div>

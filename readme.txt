@@ -1,10 +1,10 @@
 === WP-CopyRightPro ===
 Contributors: Andres Felipe Perea V.
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=5TS4C2GX9WUR6&lc=ES&item_name=puydi&item_number=wpcopyrightpro&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
-Tags: copyright, images, gallery, prevent copy, text, disable right click, prevent select text, wordpress, content, protect
-Requires at least: 3.0
-Tested up to: 3.0
-Stable tag: 2.6
+Tags: copyright, images, gallery, prevent copy, text, disable right click, prevent select text, wordpress, content, protect, pro
+Requires at least: 4.2.4
+Tested up to: 4.2.4
+Stable tag: 2.8
 
 If you install WP-CopyRightPro, your content of wordpress will be protected.
 
@@ -58,6 +58,8 @@ When activating 100% of the protections, in less than a week, Wp-CopyRightPro ca
 
 == Changelog ==
 
+= 2.8 =
+* For Wordpress 4.2.4
 = 2.6 =
 * New control panel
 = 2.5 =

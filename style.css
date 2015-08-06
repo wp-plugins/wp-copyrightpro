@@ -139,3 +139,12 @@
 #copy_link{
 	margin-right:5px;
 }
+
+#message_copypro{
+	background:#F00;
+	color:#FFF;
+}
+
+#message_copypro a{
+	color:#FF0;
+}
